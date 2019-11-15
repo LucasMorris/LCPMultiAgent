@@ -1,3 +1,4 @@
 class dough:
 
-    availibility = 1
+    def __init__(self):
+        self.availability = 1

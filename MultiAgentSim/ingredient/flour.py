@@ -1,3 +1,4 @@
 class flour:
 
-    availibility = 5
+    def __init__(self):
+        self.availability = 4

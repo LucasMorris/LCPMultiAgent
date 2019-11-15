@@ -1,3 +1,4 @@
 class salt:
 
-    availibility = 4
+    def __init__(self):
+        self.availability = 5

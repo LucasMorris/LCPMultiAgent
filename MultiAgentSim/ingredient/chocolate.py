@@ -1,3 +1,4 @@
 class chocolate:
 
-    availibility = 2
+    def __init__(self):
+        self.availability = 2
