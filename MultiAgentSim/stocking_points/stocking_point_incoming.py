@@ -16,7 +16,10 @@ class incoming_storage:
 
 
 
-stock_bb = []
+stock_bb = [] #There is a way in python to create a function via def, that substitute words based on inputs. So we could write stock_ingredientname and substitute "ingredient name" based on a list.
 if timer.clock_t < 0:
-    stock_bb[timer.clock_t] = stock_bb[timer.clock_t - 1] + push[timer.clock_t] - pull[timer.clock_t]
-else stock_bb[timer.clock_t] = push[timer.clock_t] - pull[timer.clock_t]
+    stock_bb[timer.clock_t] = stock_bb[timer.clock_t - 1] + outgoing_bb[timer.clock_t] - incoming_bb[timer.clock_t]
+    #The list incoming has to be defined here with help of the availability variable. The list outgoing has to be defined in oven.
+else stock_bb[timer.clock_t] = outgoing_bb[timer.clock_t] - incoming_bb[timer.clock_t]
+
+incoming_bb = blueberries.availability #At the moment this value is independent from clock_t. We could change that by making it random.
