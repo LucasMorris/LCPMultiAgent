@@ -2,3 +2,4 @@ class salt:
 
     def __init__(self):
         self.availability = 5
+        self.incoming_stock = []
