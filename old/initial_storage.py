@@ -1,4 +1,5 @@
-from MultiAgentSim import supply_delivery
+from old import supply_delivery
+
 
 class InitalStorage:
 initalNails = 0
