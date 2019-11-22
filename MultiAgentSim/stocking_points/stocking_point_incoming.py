@@ -3,17 +3,25 @@ from MultiAgentSim import timer
 #This importing gives me error messages.
 
 class incoming_storage:
-    def __init__(self):
-        self.incoming_stocks_list = []
+    def __init__(self, incoming_stocks_list, i):
+        self.incoming_stocks_list = incoming_stocks_list
+        self.number_ingredients = number_ingredients
+        self.i = i
 
-    def incoming_stock_change():
-        number_ingredients = len(ingredients.incoming_stocks)
-        for i in range(0, number_ingredients):
-            if timer.clock_t < 0:
-                ingredients.incoming_stocks(i)[timer.clock_t] = ingredients.incoming_stocks(i)[timer.clock_t - 1] + ingredients.ingredient_availability(i)[timer.clock_t]  # -outgoing_bb[timer.clock_t]
-            else:
-                ingredients.incoming_stocks(i)[timer.clock_t] = ingredients.incoming_stocks(i)[timer.clock_t] + ingredients.ingredient_availability(i)[timer.clock_t]   # -outgoing_bb[timer.clock_t]
-            print(ingredients.incoming_stocks)
+incoming_stocks_list = []
+
+number_ingredients = len(ingredients.incoming_stocks)   #counts number of ingredient (list elements in incoming stocks)
+
+for i in range(0, number_ingredients):      #loops through all list elements from incoming stock
+    if timer.clock_t > 0:   #makes sure that clock_t-1 doesnt get negative
+        ingredients.incoming_stocks(i)[timer.clock_t] = ingredients.incoming_stocks(i)[timer.clock_t - 1] + \
+                                                        ingredients.ingredient_availability(i)[
+                                                            timer.clock_t]  # -outgoing_bb[timer.clock_t]
+    else: #loop at clock_t = 0
+        ingredients.incoming_stocks(i)[timer.clock_t] = ingredients.incoming_stocks(i)[timer.clock_t] + \
+                                                        ingredients.ingredient_availability(i)[
+                                                            timer.clock_t]  # -outgoing_bb[timer.clock_t]
+    print(ingredients.incoming_stocks)
 
 
 #Below this there are just old notes that we can delete if my idea was good
