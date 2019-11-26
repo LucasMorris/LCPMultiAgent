@@ -1,8 +1,6 @@
-from MultiAgentSim.ingredient import blueberries
-from MultiAgentSim.ingredient import chocolate
-from MultiAgentSim.ingredient import dough
-from MultiAgentSim.ingredient import flour
-from MultiAgentSim.ingredient import salt
+from old2.ingredient import dough, chocolate, flour, salt, blueberries
+
+
 #, blueberries, chocolate, dough, flour, salt
 class ingredients:
 

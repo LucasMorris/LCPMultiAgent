@@ -1,5 +1,7 @@
-from MultiAgentSim.ingredient import ingredients
-from MultiAgentSim import timer
+from old2.ingredient import ingredients
+from old2 import timer
+
+
 #This importing gives me error messages.
 
 class incoming_storage:

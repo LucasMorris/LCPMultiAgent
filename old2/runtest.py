@@ -1,0 +1,3 @@
+from old2.stocking_points import stocking_point_incoming
+
+stocking_point_incoming.incoming_storage.incoming_stock_change()
